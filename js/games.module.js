@@ -54,6 +54,7 @@ export class Games{
 
     // ===== Get Games from API with Category name =====
     async getGames(category){
+        document.querySelector('.loading').classList.remove('d-none')
         const url = `https://free-to-play-games-database.p.rapidapi.com/api/games?&category=${category}`;
         const options = {
             method: 'GET',
@@ -65,10 +66,12 @@ export class Games{
         try {
             const response = await fetch(url, options);
             const gamesData = await response.json();
-            console.log(gamesData);
+            // console.log(gamesData);
             this.displayGames(gamesData)
+            document.querySelector('.loading').classList.add('d-none')
         } catch (error) {
-            console.error(error);   
+            console.error(error);  
+            document.getElementById('alert').classList.remove('d-none')
         }
     }
 }
