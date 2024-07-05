@@ -55,7 +55,6 @@ nav a.nav-link {
   filter: grayscale(0);
   transform: scale(1.07);
 }
-
-.badge-color {
-  background-color: #32383e;
+.badge {
+  background-color: #0099cc;
 }
