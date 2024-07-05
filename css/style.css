@@ -86,7 +86,7 @@ nav {
 }
 nav a.navbar-brand {
   color: #fff;
-  font-family: "Nerko One", cursive;
+  font-family: "Nerko One", "cursive";
   white-space: nowrap;
   font-weight: 500;
   line-height: 1.2;
@@ -117,4 +117,12 @@ nav a.nav-link {
 }
 .badge {
   background-color: #0099cc;
+}
+/* ========== details ========== */
+.details {
+  color: #fff;
+}
+.details h1 {
+  padding-block: 1.5rem;
+  font-family: "Nerko One", "cursive";
 }
