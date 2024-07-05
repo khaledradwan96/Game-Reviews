@@ -4,7 +4,6 @@ export class Games{
     constructor(){
         this.changeActive()
         this.getGames("MMORPG")
-
     }
     
     // ===== change Active link when click =====
@@ -52,12 +51,6 @@ export class Games{
         }
         document.getElementById('gamesContainer').innerHTML = gamesBox
     }
-
-    // ===== display Details function =====
-    displayDetails(){
-
-    }
-
 
     // ===== Get Games from API with Category name =====
     async getGames(category){
