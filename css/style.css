@@ -1,0 +1,61 @@
+body {
+  font-family: "Comfortaa", sans-serif;
+  background-color: #272b30;
+}
+header {
+  margin-bottom: 3rem;
+}
+
+header img {
+  width: 100%;
+  max-height: 30vh;
+}
+
+/* ========== navbar ========== */
+nav {
+  background-color: rgb(58, 73, 123);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+}
+
+.navbar-brand img {
+  max-width: 40px;
+}
+.nav-link {
+  text-transform: uppercase;
+}
+nav a.navbar-brand {
+  color: #fff;
+  font-family: "Nerko One", cursive;
+  white-space: nowrap;
+  font-weight: 500;
+  line-height: 1.2;
+}
+nav a.nav-link {
+  color: #fff;
+  cursor: pointer;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.navbar-nav .nav-link:hover {
+  color: #0099cc;
+}
+.navbar-brand:focus,
+.navbar-brand:hover {
+  color: #fff;
+}
+
+/* ========== games ========== */
+.games .card {
+  filter: grayscale(0.7);
+  transition: transform 0.5s, filter 0.5s 0.1s;
+}
+.games .card:hover {
+  filter: grayscale(0);
+  transform: scale(1.07);
+}
+
+.badge-color {
+  background-color: #32383e;
+}

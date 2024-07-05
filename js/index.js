@@ -1,3 +1,7 @@
+import {Games} from './games.module.js'
+const games = new Games()
+
+
 async function getGames(){
     const url = 'https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser&category=mmorpg&sort-by=release-date';
     const options = {
@@ -14,6 +18,7 @@ async function getGames(){
         console.log(result);
     } catch (error) {
         console.error(error);   
+        Console.log('')
     }
 }
 getGames()
