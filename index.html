@@ -27,49 +27,50 @@
         </div>
     </div>
 
-    <!-- ========== Header section with navbar ========== -->
+    <!-- ========== Header section ========== -->
     <header>
         <img src="assets/asset 0.png" alt="">
-        <nav class="navbar mx-auto navbar-expand-lg nav-bg position-sticky top-0 z-3 col-md-6 col-lg-9">
-            <div class="container">
-                <a class="navbar-brand text-uppercase">
-                    <img src="assets/asset 1.png" alt="">
-                    Game Reviews
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span></button>
-                <div class="collapse small navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 menu small">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" data-category="mmorpg">mmorpg</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-category="Shooter">Shooter</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-category="Sailing">Sailing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-category="Permadeath">Permadeath</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-category="Superhero">Superhero</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-category="Pixel">Pixel</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
     </header>
 
 
     <!-- ========== Game Section ========== -->
     <section class="games" id="games">
         <div class="container">
+            <!-- ========== Navbar ========== -->
+            <nav class="navbar mb-3 mx-auto navbar-expand-md position-sticky top-0 z-3 col-xl-9">
+                <div class="container">
+                    <a class="navbar-brand text-uppercase">
+                        <img src="assets/asset 1.png" alt="">
+                        Game Reviews
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse small navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto  menu small">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" data-category="mmorpg">mmorpg</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-category="Shooter">Shooter</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-category="Sailing">Sailing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-category="Permadeath">Permadeath</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-category="Superhero">Superhero</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-category="Pixel">Pixel</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             <div id="gamesContainer" class="row row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
                 <div id="alert" class="alert alert-danger d-none">Fail to get Data</div>
             </div>
