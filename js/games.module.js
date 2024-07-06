@@ -1,5 +1,7 @@
 // section of home
 
+import { Details } from "./details.module.js"
+
 export class Games{
     constructor(){
         this.changeActive()
@@ -24,6 +26,7 @@ export class Games{
     
     // ===== display Games function =====
     displayGames(gamesData){
+        // console.log(gamesData[1].short_description.split(" ", 8).join(' '))
         let gamesBox = ''
         for(let i=0; i<gamesData.length; i++){
             gamesBox += `
@@ -36,16 +39,16 @@ export class Games{
                             </figure>
                             <figcaption>
                                 <div class="hstack justify-content-between">
-                                    <h6 class="text-light small">${gamesData[i].title}</h6>
-                                    <span class="badge text-bg-primary p-2">Free</span>
+                                    <h6 class="text-light small mb-0">${gamesData[i].title}</h6>
+                                    <span class="badge text-bg-danger p-2">free</span>
                                 </div>
-                                <p class="card-text text-light small text-center opacity-50">
-                                    ${gamesData[i].short_description}</p>
+                                <p class="card-text mt-2 text-light small text-center opacity-50">
+                                    ${gamesData[i].short_description.split(" ", 8).join(' ')}</p>
                             </figcaption>
                         </div>
                         <div class="card-footer small d-flex justify-content-between">
-                            <span class="badge">${gamesData[i].genre}</span>
-                            <span class="badge">${gamesData[i].platform}</span>
+                            <span class="badge text-bg-info">${gamesData[i].genre}</span>
+                            <span class="badge text-bg-warning">${gamesData[i].platform}</span>
                         </div>
                     </div>
                 </div>`
@@ -75,11 +78,11 @@ export class Games{
             let cards = document.querySelectorAll('#gamesContainer .card')
             // console.log(cards)
             for(let card of cards){
-                card.addEventListener('click', function(e){
+                card.addEventListener('click', function(){
                     document.querySelector('header').classList.add('d-none')
                     document.querySelector('.games').classList.add('d-none')
                     document.querySelector('.details').classList.remove('d-none')
-                    // console.log(e.target)
+                    new Details(card.dataset.id)
                 })
             }
 

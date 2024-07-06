@@ -1,8 +1,8 @@
 // section of details
 
 export class Details{
-    constructor(){
-        this.getDetails()
+    constructor(id){
+        this.getDetails(id)
         this.closeDetails()
 
     }
@@ -16,11 +16,12 @@ export class Details{
             <div class="col-md-8">
                 <h3>Title: ${gamesData.title}</h3>
                 <p>Category: <span class="badge text-bg-info">${gamesData.genre}</span></p>
-                <p>Platform: <span class="badge text-bg-info">${gamesData.platform}</span></p>
-                <p>Status: <span class="badge text-bg-info">${gamesData.status}</span></p>
+                <p>Platform: <span class="badge text-bg-warning">${gamesData.platform}</span></p>
+                <p>Status: <span class="badge text-bg-danger">${gamesData.status}</span></p>
+                </div>
                 <p>${gamesData.description}</p>
                 <a href="${gamesData.game_url}" target="_blank" class="btn btn-outline-warning text-light">Show Game</a>
-            </div>`
+            `
             document.getElementById('detailsContainer').innerHTML = detailsBox
         }
 
@@ -34,8 +35,8 @@ export class Details{
     }
 
     // ===== Get Game Details from API with id number =====
-    async getDetails(id){
-        id = '582'
+    async getDetails(id = '582'){
+        document.querySelector('.loading').classList.remove('d-none')
         const url = `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`;
         const options = {
             method: 'GET',
@@ -50,6 +51,7 @@ export class Details{
             const gameDetails = await response.json();
             // console.log(gameDetails);
             this.displayDetails(gameDetails)
+            document.querySelector('.loading').classList.add('d-none')
         } catch (error) {
             console.error(error);
         }
