@@ -4,6 +4,7 @@ export class Games{
     constructor(){
         this.changeActive()
         this.getGames("MMORPG")
+
     }
     
     // ===== change Active link when click =====
@@ -68,13 +69,17 @@ export class Games{
             const gamesData = await response.json();
             // console.log(gamesData);
             this.displayGames(gamesData)
+            // loading spinner
             document.querySelector('.loading').classList.add('d-none')
+            // show details
             let cards = document.querySelectorAll('#gamesContainer .card')
             // console.log(cards)
-
             for(let card of cards){
-                card.addEventListener('click', function(){
-                    console.log('hi')
+                card.addEventListener('click', function(e){
+                    document.querySelector('header').classList.add('d-none')
+                    document.querySelector('.games').classList.add('d-none')
+                    document.querySelector('.details').classList.remove('d-none')
+                    // console.log(e.target)
                 })
             }
 
