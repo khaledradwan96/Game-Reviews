@@ -4,9 +4,7 @@ export class Details{
     constructor(id){
         this.getDetails(id)
         this.closeDetails()
-
     }
-
     // ===== display Details function =====
     displayDetails(gamesData){
         let detailsBox = 
@@ -24,7 +22,6 @@ export class Details{
             `
             document.getElementById('detailsContainer').innerHTML = detailsBox
         }
-
     // close Details section
     closeDetails(){
             document.querySelector('.btn-close').addEventListener('click', function(){
@@ -33,7 +30,6 @@ export class Details{
                 document.querySelector('.details').classList.add('d-none')
             })
     }
-
     // ===== Get Game Details from API with id number =====
     async getDetails(id = '582'){
         document.querySelector('.loading').classList.remove('d-none')
@@ -45,7 +41,6 @@ export class Details{
                 'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com'
             }
         };
-    
         try {
             const response = await fetch(url, options);
             const gameDetails = await response.json();

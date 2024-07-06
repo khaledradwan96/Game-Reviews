@@ -6,9 +6,7 @@ export class Games{
     constructor(){
         this.changeActive()
         this.getGames("MMORPG")
-
     }
-    
     // ===== change Active link when click =====
     changeActive(){
         let links = document.querySelectorAll('.nav-link')
@@ -23,7 +21,6 @@ export class Games{
             })
         }
     }
-    
     // ===== display Games function =====
     displayGames(gamesData){
         // console.log(gamesData[1].short_description.split(" ", 8).join(' '))
@@ -55,7 +52,6 @@ export class Games{
         }
         document.getElementById('gamesContainer').innerHTML = gamesBox
     }
-
     // ===== Get Games from API with Category name =====
     async getGames(category){
         document.querySelector('.loading').classList.remove('d-none')
@@ -85,7 +81,6 @@ export class Games{
                     new Details(card.dataset.id)
                 })
             }
-
         } catch (error) {
             console.error(error);  
             document.getElementById('alert').classList.remove('d-none')
