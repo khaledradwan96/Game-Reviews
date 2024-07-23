@@ -25,3 +25,5 @@
 - there is a loading page.
 
 ### [Demo link](https://khaledradwan96.github.io/Game-Reviews/)
+
+### [video review](https://www.linkedin.com/posts/khaledradwan96_frontend-route-gamesabrreview-activity-7215349748491288576-_YHd?utm_source=share&utm_medium=member_desktop)
